@@ -1,7 +1,7 @@
 import React from 'react';
 import CartProduct from '../../components/CartProduct/CartProduct';
 import Price from '../../components/Price/Price';
-import { useStore } from '../../Service';
+import { useStore } from '../../../Domain/Service';
 import { ScrollView } from 'react-native';
 import { CartModel } from '../../../Domain/Models/Cart';
 import { View, FlatList } from 'react-native';

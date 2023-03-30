@@ -1,5 +1,5 @@
 import React from 'react';
-import { DATA_STATE } from './../../Service/Utils/dataState';
+import { DATA_STATE } from '../../../Domain/Service/Utils/dataState';
 import Loader from './../../components/Loader/Loader';
 import { View, Text, FlatList } from 'react-native';
 

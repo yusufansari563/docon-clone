@@ -1,6 +1,5 @@
 import React from 'react';
-import { ProductGet } from '../../../Domain/UseCases/ProductService';
-import { useStore } from '../store';
+import { ProductGet } from '../../UseCases/ProductService';
 
 export async function getProduct() {
   let product;
