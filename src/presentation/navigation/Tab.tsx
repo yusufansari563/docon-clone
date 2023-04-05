@@ -13,9 +13,10 @@ export function HomeScreen() {
     }}>
       <Tab.Screen
         options={{
-          tabBarIcon: ({ }) => <AntDesign name='home' size={24} color='black' />,
+          tabBarIcon: ({ }) => <AntDesign name='home' size={24}  />,
+          tabBarActiveTintColor: 'blue'
         }}
-        name='Product'
+        name='Home'
         component={Product}
       />
 
