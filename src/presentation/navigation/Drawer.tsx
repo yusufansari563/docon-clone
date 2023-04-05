@@ -9,7 +9,7 @@ const Drawer = () => {
   return (
     <DrawerContainer.Navigator initialRouteName='Home'>
       <DrawerContainer.Screen
-        name='Home'
+        name='Hello, Patient'
         component={HomeScreen}
         options={{
           drawerIcon: ({}) => <AntDesign name='home' size={24} color='black' />,
