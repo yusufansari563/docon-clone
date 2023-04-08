@@ -1,17 +1,13 @@
 import React from "react";
-import { VStack, Input, Icon, NativeBaseProvider, Center } from "native-base";
-import { MaterialIcons } from "@expo/vector-icons";
-import { View } from "react-native";
+import { VStack, Input, Icon, NativeBaseProvider, Center, Box } from "native-base";
+import { MaterialIcons, Ionicons } from "@expo/vector-icons";
 
 function SearchBar() {
-
     return (
-        <View className="">
-            <VStack w="360" space={5} alignSelf="center" className="  border-solid border-4 border-blue-100 rounded-md mr-4"
-            >
-                <Input placeholder="Search by your doctor's name or Docon ID" width="100%" borderRadius="4" py="3" px="1" fontSize="14" InputLeftElement={<Icon m="2" ml="3" size="6" color="gray.400" as={<MaterialIcons name="search" />} />} />
-            </VStack>
-        </View>
+        <VStack className="border-2 border-blue-200 rounded " w="100%"  maxW="350px" alignSelf="center" >
+            <Input  placeholder="Search by your doctor's or Docon Id" width="100%" borderRadius="5" py="1" px="2" InputLeftElement={<Icon ml="2" size="4" color="muted.900" as={<Ionicons name="ios-search" />} />} />
+        </VStack>
+
     )
 }
 
