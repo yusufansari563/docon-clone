@@ -3,49 +3,65 @@ import {
     View,
     FlatList,
     Text,
+    Image,
 } from 'react-native';
-
 
 
 const DATA = [
     {
-        id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
+        id: '1',
+        step: "STEP 1/4",
         title: 'First Item',
+        url: 'https://images.unsplash.com/photo-1512238701577-f182d9ef8af7',
     },
     {
-        id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
+        id: '2',
+        step: "STEP 2/4",
         title: 'Second Item',
+        url: 'https://images.unsplash.com/photo-1607326957431-29d25d2b386f',
     },
     {
-        id: '58694a0f-3da1-471f-bd96-145571e29d72',
+        id: '3',
+        step: "STEP 3/4",
         title: 'Third Item',
+        url: 'https://images.unsplash.com/photo-1607326957431-29d25d2b386f',
     },
     {
         id: '4',
+        step: "STEP 4/4",
         title: 'Third Item',
+        url: 'https://images.unsplash.com/photo-1607326957431-29d25d2b386f',
     },
 ];
 
-interface dataType  {
+interface CarouselItem {
     id: string;
     title: string;
-    
+    url: string;
+    step: string;
+
 }
 
 
 const App = () => {
     return (
         <View>
-            <FlatList className='bg-red-400 h-96 w-full mb-5'
+            <FlatList className=' h-96 w-full mb-5'
                 data={DATA}
                 horizontal
                 renderItem={({ item }) => (
-                    <View className=' mx-2 snap-x '>
-                        <Text className='m-2 h-4/5 w-72 bg-yellow-200 '>{item.title}</Text>
-                    </View>
-                    
+                    <>
+                        <View className=' mx-2 snap-x '>
+                            <View className='m-2 h-4/5 w-72 bg-yellow-200 '>
+                                <Image source={{ uri: item.url }} className='h-20' />
+                                <Text className='text-lg font-bold text-slate-400'>{item.step}</Text>
+                                <Text>{item.title}</Text>
+                            </View>
+                        </View>
+                    </>
+
                 )}
-                keyExtractor={(item: dataType) => item.id}
+                keyExtractor={(item: CarouselItem) => item.id}
             />
         </View>
     );
