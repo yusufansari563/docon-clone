@@ -1,10 +1,10 @@
 import {Text, View} from 'react-native'
 import React from 'react'
 
-export default function Record() {
+export default function Home() {
     return (
         <View>
-            <Text>Record</Text>
+            <Text>Home</Text>
         </View>
     )
 }

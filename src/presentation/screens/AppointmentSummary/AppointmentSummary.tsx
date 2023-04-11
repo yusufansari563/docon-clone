@@ -1,10 +1,10 @@
 import {Text, View} from 'react-native'
 import React from 'react'
 
-export default function Record() {
+export default function AppointmentSummary() {
     return (
         <View>
-            <Text>Record</Text>
+            <Text>Appointment Summary</Text>
         </View>
     )
 }
