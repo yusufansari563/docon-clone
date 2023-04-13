@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import CarouselText from './CarouselText'
 import { Image } from 'react-native';
 
-const {height, width} = Dimensions.get('window')
 
 export default function CarouselSlides() {
 
