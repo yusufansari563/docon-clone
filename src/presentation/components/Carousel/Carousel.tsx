@@ -6,7 +6,7 @@ import CarouselSlides from './CarouselSlides'
 export default function Carousel() {
   return (
     <View>
-        {/* <CarouselText /> */}
+        <CarouselText />
         <CarouselSlides />
     </View>
   )
