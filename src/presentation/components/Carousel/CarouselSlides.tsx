@@ -5,10 +5,12 @@ import { Image } from 'react-native';
 
 import CarouselItem from './CarouselItem';
 
+const {width, height} = Dimensions.get('window')
+
 export default function CarouselSlides() {
 
     return (
-        <View>
+        <View className='bg-gray-200'>
             <View className='m-2'>
                 <CarouselText />
             </View>
@@ -19,8 +21,8 @@ export default function CarouselSlides() {
                     showsHorizontalScrollIndicator={false}
                     renderItem={({ item }) => (
                         <View>
-                            <View className='m-2 '>
-                                <View className='ml-2 h-80 w-64 border border-blue-300  rounded-xl'>
+                            <View className='mx-2 mb-6 '>
+                                <View className='ml-2 h-80 w-64 border border-blue-300  rounded-xl bg-white'>
                                     <View className=' flex justify-center items-center m-1'>
                                         <Image source={{ uri: item.image }} className='h-40 w-full rounde' />
                                     </View>
