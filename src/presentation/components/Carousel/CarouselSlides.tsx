@@ -10,7 +10,8 @@ const {width, height} = Dimensions.get('window')
 export default function CarouselSlides() {
 
     return (
-        <View className='bg-gray-200'>
+        // className='bg-gray-200'
+        <View>  
             <View className='m-2'>
                 <CarouselText />
             </View>
