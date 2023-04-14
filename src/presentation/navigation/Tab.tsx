@@ -2,7 +2,6 @@ import { AntDesign, Ionicons, Feather } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 // import Cart from '../screens/Cart';
 import Appointment from '../screens/Appointments/Appointment';
-import Product from '../screens/Products/Product';
 import Record from '../screens/Records/Record';
 import Home from '../screens/Home/Home';
 import { Pressable } from 'react-native';
