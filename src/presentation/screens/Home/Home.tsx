@@ -1,7 +1,9 @@
 import React from 'react'
 import { View, Text, Image } from 'react-native';
-import SearchBar from '../../components/SearchBar/SearchBar';
+
 import Carousel from '../../components/Carousel/Carousel';
+import { SearchBar } from '../../components/SearchBar/SearchBar';
+import HomeButton from '../../components/Button/HomeButton';
 
 export default function Home() {
     return (
@@ -18,7 +20,7 @@ export default function Home() {
                 </View>
               </View>
             </View>
-          <SearchBar />
+          <HomeButton />
           <Carousel />
         </View>
     )
