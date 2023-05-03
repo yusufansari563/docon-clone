@@ -19,7 +19,8 @@ export function TabNavigation({ navigation }: { navigation: any }) {
     >
       <Tab.Screen
         options={{
-          tabBarIcon: ({}) => <AntDesign name='home' size={24} />,
+          tabBarIcon: ({color}) => 
+          <AntDesign name='home' size={24} color={color} />,
           tabBarActiveTintColor: 'blue',
           title: 'Home',
         }}
@@ -29,10 +30,12 @@ export function TabNavigation({ navigation }: { navigation: any }) {
 
       <Tab.Screen
         options={{
-          tabBarIcon: ({}) => (
-            <Feather name='file-plus' size={24} color='black' />
+          tabBarIcon: ({color}) => (
+            <Feather name='file-plus' size={24} color={color} />
+            
           ),
           title: 'Record',
+          tabBarActiveTintColor: 'blue',
         }}
         name={SCREEN_NAME.RECORD}
         component={Record}
@@ -40,10 +43,11 @@ export function TabNavigation({ navigation }: { navigation: any }) {
 
       <Tab.Screen
         options={{
-          tabBarIcon: ({}) => (
-            <Feather name='calendar' size={24} color='black' />
+          tabBarIcon: ({color}) => (
+            <Feather name='calendar' size={24} color={color} />
           ),
           title: 'Appointment',
+          tabBarActiveTintColor: 'blue',
         }}
         name={SCREEN_NAME.APPOINTMENT}
         component={Appointment}

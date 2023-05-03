@@ -1,10 +1,9 @@
 import { createStackNavigator } from '@react-navigation/stack';
-import { Details } from '../screens/Details/Details';
-import Home from '../screens/Home/Home';
 import Notifications from '../screens/Notifications/Notifications';
 import Drawer from './Drawer';
 import { SCREEN_NAME } from '../Utils';
 import Settings from '../screens/Settings/Settings';
+import FindDoctor from '../screens/FindDoctor/FindDoctor';
 
 const Stack = createStackNavigator();
 export function stack() {
@@ -21,6 +20,7 @@ export function stack() {
       />
       <Stack.Screen name={SCREEN_NAME.NOTIFICATION} component={Notifications} />
       <Stack.Screen name={SCREEN_NAME.SETTING} component={Settings} />
+      <Stack.Screen name={SCREEN_NAME.SEARCH} component={FindDoctor} />
     </Stack.Navigator>
   );
 }
