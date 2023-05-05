@@ -34,7 +34,7 @@ export default function SettingForm() {
           maxLength={50}
         />
       </View>
-      <View className="flex flex-row">
+      <View className="flex flex-row items-center">
         <RadioButton 
           value="male"
           status={checked === 'male' ? 'checked' : 'unchecked'}
