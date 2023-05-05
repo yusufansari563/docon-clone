@@ -19,7 +19,12 @@ export function stack() {
         component={Drawer}
       />
       <Stack.Screen name={SCREEN_NAME.NOTIFICATION} component={Notifications} />
-      <Stack.Screen name={SCREEN_NAME.SETTING} component={Settings} />
+      <Stack.Screen
+        options={{
+          headerShown:true,
+          headerTitle: "Settings"
+        }}
+      name={SCREEN_NAME.SETTING} component={Settings} />
       <Stack.Screen name={SCREEN_NAME.SEARCH} component={FindDoctor} />
     </Stack.Navigator>
   );

@@ -8,6 +8,8 @@ import CarouselItem from './CarouselItem';
 const {width, height} = Dimensions.get('window')
 
 export default function CarouselSlides() {
+    const [data, setData] = useState(CarouselItem)
+    const [currentIndex, setCurrentIndex] = useState(0);
 
     return (
         // className='bg-gray-200'
@@ -20,6 +22,10 @@ export default function CarouselSlides() {
                     data={CarouselItem}
                     horizontal
                     showsHorizontalScrollIndicator={false}
+                    onScroll={e => {
+                        const x = e.nativeEvent.contentOffset.x;
+                        setCurrentIndex(parseInt((x / 256).toFixed(0)));
+                    }}
                     renderItem={({ item }) => (
                         <View>
                             <View className='mx-2 mb-6 '>
@@ -38,9 +44,27 @@ export default function CarouselSlides() {
                     )}
                     keyExtractor={(item) => item.id}
                 />
+
+                {/* -------------------indicator------------------  */}
+                <View  className='flex-row justify-center items-center'
+                style={styles.indicatorContainer}>
+                    {
+                        data.map((item, index) => {
+                            return (
+                                <View className='w-12 h-1 rounded ml-1'
+                                    style={{backgroundColor: currentIndex == index ? '#3bb0de' : 'lightgray'}}>
+                                </View>
+                            )
+                        })
+                    }
+                </View>
             </View>
         </View>
     )
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    indicatorContainer: {
+        width: width,
+    },
+})

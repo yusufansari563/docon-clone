@@ -2,6 +2,7 @@ import React from 'react'
 import { Pressable, StyleSheet, Text, View} from 'react-native'
 import { useNavigation } from '@react-navigation/native';
 import { Avatar } from 'native-base';
+
 import { SearchBar } from '../../components/SearchBar/SearchBar';
 import { SCREEN_NAME } from '../../Utils';
 
