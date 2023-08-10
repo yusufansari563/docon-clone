@@ -1,6 +1,6 @@
-# docon-clone
+# docon-expo-clone
 
-Its a clone of a health care brand with a clean architechture.
+It's a clone of a healthcare brand with a clean architecture build with react native.
 
 ![MicrosoftTeams-image (5)](https://github.com/yusufansari563/docon-clone/assets/33633891/b84e1d70-ee78-4a39-9c3e-4fc12a4aecba)
 ![MicrosoftTeams-image (6)](https://github.com/yusufansari563/docon-clone/assets/33633891/5b831932-6b8b-45f1-ac6f-8b691362483d)
